@@ -25,4 +25,4 @@ Ensure you have the required packages installed. Run the following command: pip 
 
 3. Run the Streamlit App:
 
-Start the application by executing: streamlit run app/main.py
+Start the application by executing: streamlit run app\main.py
