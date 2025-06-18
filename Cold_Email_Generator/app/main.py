@@ -1,5 +1,5 @@
 import streamlit as st
-import langchain_community
+from langchain_community.document_loaders import WebBaseLoader
 
 from chains import Chain
 from portfolio import Portfolio
@@ -13,7 +13,7 @@ def create_streamlit_app(llm, portfolio, clean_text):
 
     if submit_button:
         try:
-            loader = langchain_community.document_loaders.WebBaseLoader([url_input])
+            loader = WebBaseLoader([url_input])
             data = clean_text(loader.load().pop().page_content)
             portfolio.load_portfolio()
             jobs = llm.extract_jobs(data)
