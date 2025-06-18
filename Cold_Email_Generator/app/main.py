@@ -1,5 +1,5 @@
 import streamlit as st
-import langchain_community.document_loaders
+import langchain_community
 
 from chains import Chain
 from portfolio import Portfolio
