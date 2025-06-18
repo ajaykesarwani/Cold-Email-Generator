@@ -8,7 +8,8 @@ class Portfolio:
         self.data = pd.read_csv(file_path)
         try:
             # Initialize chroma client for persistent storage
-            self.chroma_client = chromadb.PersistentClient('vectorstore')
+            #self.chroma_client = chromadb.PersistentClient('vectorstore')
+            client = chromadb.Client()
         except Exception as e:
             print(f"Error initializing ChromaDB client: {e}")
             raise
