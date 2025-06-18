@@ -9,7 +9,7 @@ class Portfolio:
         try:
             # Initialize chroma client for persistent storage
             #self.chroma_client = chromadb.PersistentClient('vectorstore')
-            client = chromadb.Client()
+            self.chroma_client = chromadb.Client()
         except Exception as e:
             print(f"Error initializing ChromaDB client: {e}")
             raise
